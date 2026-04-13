@@ -1,5 +1,17 @@
-package inicial.ejercicio03;;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package inicial.ejercicio03;
 
-public class Pago {
-    // TODO: Declarar método para procesar el pago
+/**
+ *
+ * @author user
+ */
+public interface Pago {
+    
+    
+    boolean realizarPago(double monto);
+   
+    
 }

@@ -1,15 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package inicial.ejercicio03;
-import java.util.Scanner;
 
+/**
+ *
+ * @author user
+ */
 public class PagoConTarjeta extends MetodoPago {
+    
+    private String numTarjeta;
 
-    public PagoConTarjeta(double monto) {
-        //
+    public PagoConTarjeta(String numTarjeta, double monto) {
+        super(monto);
+        if(numTarjeta.length()==16){
+            this.numTarjeta = numTarjeta;
+        }else{
+            System.out.println("No se ha registrado el numero de la tarjeta. Debe conter 16 digitos");
+        }
     }
 
-    // @Override
+    public String getNumTarjeta() {
+        return numTarjeta;
+    }
+
+    public void setNumTarjeta(String numTarjeta) {
+        this.numTarjeta = numTarjeta;
+    }
+
+    @Override
     public boolean realizarPago(double monto) {
-        // TODO: Solicitar número de tarjeta y validar
-        return false;
+        if (numTarjeta.length()>0){
+            System.out.println("Se Realizo el Pago cuyo monto es "+monto);
+            return true;
+        }else{
+            System.out.println("No se Realizo el Pago");
+            return false;
+        }
     }
+
+    
+    
+    
+     
+    
 }
